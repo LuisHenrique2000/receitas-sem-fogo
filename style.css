@@ -1,0 +1,231 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Lato', Arial, sans-serif; /* Fonte mais arredondada e amigável */
+    margin: 0;
+    padding: 0;
+    background-color: #FFF5F7; /* Fundo Rosé Claro */
+    color: #444; /* Cor de texto principal um pouco mais suave */
+    line-height: 1.7;
+    font-size: 18px; /* Tamanho de fonte base confortável */
+}
+
+/* Container Principal */
+.modulos-container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+    border-bottom: 1px solid #FADAE0; /* Borda inferior suave */
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.6em;
+    margin: 0;
+    color: #993F4D; /* Cor Vinho Suave */
+    font-weight: 700; /* Um pouco mais de peso */
+}
+
+/* Módulos */
+.modulo {
+    background-color: #ffffff;
+    margin-bottom: 30px;
+    padding: 20px 25px 25px 25px; /* Ajuste no padding */
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08); /* Sombra um pouco mais definida */
+    border: 1px solid #FADAE0; /* Borda sutil */
+}
+
+.modulo-titulo {
+    font-size: 1.9em;
+    color: #993F4D; /* Cor Vinho Suave */
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FEEFF2;
+    cursor: pointer; /* Indicar que é clicável */
+    position: relative; /* Para pseudo-elemento de seta */
+    padding-right: 25px; /* Espaço para a seta */
+}
+
+/* Seta indicadora para accordion (Módulo) */
+.modulo-titulo::after {
+    content: '\25BC'; /* Seta para baixo */
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7em;
+    color: #B88A93;
+    transition: transform 0.3s ease;
+}
+
+.modulo.aberto .modulo-titulo::after {
+    transform: translateY(-50%) rotate(180deg); /* Gira a seta quando aberto */
+}
+
+.aulas-lista {
+    padding-top: 15px; /* Espaço quando abre */
+}
+
+/* Aulas */
+.aula {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #FADAE0; /* Separador suave */
+}
+
+.aula:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.aula-titulo {
+    font-size: 1.5em;
+    color: #A65C6B; /* Tom intermediário entre h1 e texto */
+    margin-top: 0;
+    margin-bottom: 10px;
+    cursor: pointer; /* Indicar que é clicável */
+    position: relative; /* Para pseudo-elemento de seta */
+    padding-right: 20px; /* Espaço para a seta */
+}
+
+/* Seta indicadora para accordion (Aula) */
+.aula-titulo::after {
+    content: '\25BC'; /* Seta para baixo */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.6em;
+    color: #C4A0A8;
+    transition: transform 0.3s ease;
+}
+
+.aula.aberta .aula-titulo::after {
+    transform: translateY(-50%) rotate(180deg); /* Gira a seta quando aberto */
+}
+
+.aula-conteudo {
+    padding-top: 15px; /* Espaço quando abre */
+}
+
+.aula p {
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 15px;
+}
+
+/* Container do Vídeo Responsivo */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #eee; /* Fundo mais claro */
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Rodapé e Botão de Suporte */
+footer {
+    text-align: center;
+    padding: 35px 15px;
+    margin-top: 40px;
+    background-color: #FDF7ED; /* Bege Quente para o rodapé */
+    border-top: 1px solid #FADAE0;
+}
+
+.botao-suporte {
+    display: inline-block;
+    background-color: #E37C77; /* Rosa Queimado */
+    color: #ffffff;
+    padding: 16px 32px; /* Botão ligeiramente maior */
+    font-size: 1.25em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.botao-suporte:hover {
+    background-color: #D16A63; /* Tom mais escuro no hover */
+    transform: translateY(-2px); /* Efeito sutil de levantar */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        font-size: 17px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    .modulo-titulo {
+        font-size: 1.7em;
+    }
+
+    .aula-titulo {
+        font-size: 1.4em;
+    }
+
+    .botao-suporte {
+        padding: 14px 28px;
+        font-size: 1.15em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .modulos-container {
+        padding: 10px;
+        margin: 15px auto;
+    }
+
+    .modulo {
+        padding: 15px 20px 20px 20px;
+    }
+
+    .modulo-titulo {
+        font-size: 1.6em;
+    }
+
+    .aula-titulo {
+        font-size: 1.3em;
+    }
+
+    .botao-suporte {
+        width: 85%;
+        padding: 15px 0;
+        font-size: 1.1em;
+    }
+}
+
