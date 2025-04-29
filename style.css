@@ -28,8 +28,8 @@ header {
 header h1 {
     font-size: 2.6em;
     margin: 0;
-    color: #000000; /* Cor Preta */
-    font-weight: 700; /* Um pouco mais de peso */
+    color: #444444; /* Cinza escuro suave */
+    font-weight: 700;
 }
 
 /* Módulos */
