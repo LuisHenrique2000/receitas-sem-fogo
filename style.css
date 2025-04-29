@@ -25,11 +25,20 @@ header {
     margin-bottom: 20px;
 }
 
+/* Imagem do Topo */
+.imagem-topo {
+    display: block;
+    margin: 0 auto 15px auto; /* Centraliza e adiciona margem inferior */
+    max-width: 120px; /* Largura máxima */
+    height: auto; /* Mantém proporção */
+    border-radius: 8px; /* Opcional: bordas arredondadas */
+}
+
 header h1 {
     font-size: 2.6em;
     margin: 0;
-    color: #E37C77; /* Rosa queimado suave */
-    font-weight: 700;
+    color: #000000; /* Cor Preta */
+    font-weight: 700; /* Um pouco mais de peso */
 }
 
 /* Módulos */
@@ -42,19 +51,39 @@ header h1 {
     border: 1px solid #FADAE0; /* Borda sutil */
 }
 
+/* Container do Título e Imagem do Módulo */
+.modulo-titulo-container {
+    display: flex; /* Alinha imagem e título lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 15px; /* Espaço entre imagem e título */
+    margin-bottom: 15px; /* Margem inferior */
+    padding-bottom: 10px; /* Padding inferior */
+    border-bottom: 1px solid #FEEFF2; /* Borda inferior */
+    cursor: pointer; /* Indicar que é clicável (para o accordion) */
+}
+
+/* Imagem do Módulo */
+.imagem-modulo {
+    width: 60px; /* Largura fixa */
+    height: 60px; /* Altura fixa (ajuste se necessário) */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+    object-fit: cover; /* Garante que a imagem cubra a área */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
 .modulo-titulo {
     font-size: 1.9em;
     color: #000000; /* Cor Preta */
-    margin-top: 0;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #FEEFF2;
-    cursor: pointer; /* Indicar que é clicável */
+    margin: 0; /* Remove margens padrão do h2 */
+    padding: 0; /* Remove paddings padrão do h2 */
+    border: none; /* Remove borda padrão do h2 */
     position: relative; /* Para pseudo-elemento de seta */
     padding-right: 25px; /* Espaço para a seta */
+    flex-grow: 1; /* Faz o título ocupar o espaço restante */
+    /* cursor: pointer; -- Movido para o container */
 }
 
-/* Seta indicadora para accordion (Módulo) */
+/* Seta indicadora para accordion (Módulo) - Agora relativa ao título */
 .modulo-titulo::after {
     content: '\25BC'; /* Seta para baixo */
     position: absolute;
@@ -66,6 +95,7 @@ header h1 {
     transition: transform 0.3s ease;
 }
 
+/* Ajuste: A classe 'aberto' agora vai no .modulo, então a regra precisa ser ajustada */
 .modulo.aberto .modulo-titulo::after {
     transform: translateY(-50%) rotate(180deg); /* Gira a seta quando aberto */
 }
@@ -214,8 +244,19 @@ footer {
         padding: 15px 20px 20px 20px;
     }
 
+    /* Ajuste no container do título do módulo para telas pequenas */
+    .modulo-titulo-container {
+        gap: 10px; /* Reduz espaço entre imagem e título */
+    }
+
+    .imagem-modulo {
+        width: 50px; /* Reduz um pouco a imagem do módulo */
+        height: 50px;
+    }
+
     .modulo-titulo {
         font-size: 1.6em;
+        padding-right: 20px; /* Ajusta espaço para seta */
     }
 
     .aula-titulo {
