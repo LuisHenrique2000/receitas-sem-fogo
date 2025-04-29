@@ -28,7 +28,7 @@ header {
 header h1 {
     font-size: 2.6em;
     margin: 0;
-    color: #993F4D; /* Cor Vinho Suave */
+    color: #000000; /* Cor Preta */
     font-weight: 700; /* Um pouco mais de peso */
 }
 
@@ -44,7 +44,7 @@ header h1 {
 
 .modulo-titulo {
     font-size: 1.9em;
-    color: #993F4D; /* Cor Vinho Suave */
+    color: #000000; /* Cor Preta */
     margin-top: 0;
     margin-bottom: 15px;
     padding-bottom: 10px;
@@ -89,7 +89,7 @@ header h1 {
 
 .aula-titulo {
     font-size: 1.5em;
-    color: #A65C6B; /* Tom intermediário entre h1 e texto */
+    color: #000000; /* Cor Preta */
     margin-top: 0;
     margin-bottom: 10px;
     cursor: pointer; /* Indicar que é clicável */
