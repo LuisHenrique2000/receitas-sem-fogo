@@ -25,13 +25,15 @@ header {
     margin-bottom: 20px;
 }
 
-/* Imagem do Topo */
+/* Imagem do Topo - Estilo Banner */
 .imagem-topo {
-    display: block;
-    margin: 0 auto 15px auto; /* Centraliza e adiciona margem inferior */
-    max-width: 120px; /* Largura máxima */
-    height: auto; /* Mantém proporção */
-    border-radius: 8px; /* Opcional: bordas arredondadas */
+    width: 100%;
+    height: auto; /* Mantido para cálculo inicial, mas max-height e object-fit dominarão */
+    max-height: 280px;
+    object-fit: cover; /* Preenche a área, cortando se necessário */
+    display: block; /* Mantido */
+    margin: 0 0 15px 0; /* Remove margem lateral auto, adiciona margem inferior */
+    border-radius: 0; /* Remove bordas arredondadas */
 }
 
 header h1 {
